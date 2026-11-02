@@ -9,7 +9,7 @@ class Solution:
         }
 
         for ch in s:
-            if ch in '({[':
+            if ch in '([{':
                 stack.append(ch)
             else:
                 if not stack or stack[-1] != pairs[ch]:

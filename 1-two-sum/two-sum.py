@@ -1,12 +1,10 @@
+   
 class Solution:
     def twoSum(self, nums, target):
-        seen = {}
+        d = {}
 
-        for i, num in enumerate(nums):
-            complement = target - num
+        for i, n in enumerate(nums):
+            if target - n in d:
+                return [d[target - n], i]
 
-            if complement in seen:
-                return [seen[complement], i]
-
-            seen[num] = i
-        
+            d[n] = i
